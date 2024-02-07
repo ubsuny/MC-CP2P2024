@@ -1,0 +1,23 @@
+{
+  "name": "Monte Carlo Simulation Project",
+  "image": "python:3.11.5",
+  "extensions": [
+      "ms-python.python"
+  ],
+  "forwardPorts": [],
+  "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "remoteUser": "vscode",
+  "runArgs": [
+      "--user=vscode"
+  ],
+  "containerEnv": {
+      "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+  },
+  "postCreateCommand": "pip install numpy scipy matplotlib pandas dask jupyter",
+  "remoteEnv": {
+      "PYTHONPATH": "/workspace"
+  }
+}
