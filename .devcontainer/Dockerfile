@@ -1,11 +1,21 @@
-FROM library/python:3.11-bookworm
+# Use the specified Python base image
+FROM python:3.11.5
 
-ARG USER=vscode
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt update \
-    && apt install -y --no-install-recommends sudo \
-    && apt autoremove -y \
-    && rm -rf /var/lib/apt/lists/* \
-    && useradd -m -s /usr/bin/bash ${USER} \
-    && echo "${USER} ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/${USER} \
-    && chmod 0440 /etc/sudoers.d/${USER}
+# Set environment variables
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONPATH=/workspace
+
+# Install necessary packages
+RUN pip install numpy scipy matplotlib pandas dask jupyter
+
+# Set the working directory to /workspace
+WORKDIR /workspace
+
+# Copy the project files into the container
+COPY . /workspace
+
+# Expose any necessary ports (if applicable)
+# EXPOSE <port_number>
+
+# Default command to execute when the container starts
+CMD ["bash"]
