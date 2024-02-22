@@ -25,5 +25,5 @@
         "security.workspace.trust.enabled": true,
         "security.workspace.trust.startupPrompt": "always"
     },
-    "postCreateCommand": "pip install numpy matplotlib scipy"
+    "postCreateCommand": "pip install numpy matplotlib scipy qutip"
 }
