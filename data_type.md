@@ -11,7 +11,7 @@ It is possible for a `Qobj` to represent mixed or pure quantum states. It is ada
 - The expectation values use the list of floating point numbers.
 
 ### Example Usage: Python annotation:
-```
+```python
 from typing import List, Union
 import numpy as np
 import qutip as qt
