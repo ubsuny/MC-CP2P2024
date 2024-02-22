@@ -5,10 +5,8 @@ Rather than a experimental practice, this project is solely based on theoretical
 A two-level atom coupled to a leaky cavity usually refers to a system in which an energy-leveled atom interacts with an electromagnetic field contained in a cavity that permits energy leakage. This situation is frequently examined within the framework of cavity quantum electrodynamics (QED), which examines the interaction between photons and atoms in cavities.
 
 - The atom is basically described by a two-level quantum system.
-- It has a groung state, let's say $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$.
+- It has a ground state, let's say $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$.
 - While photons can be contained within the cavity, energy can also escape from it.
-
-### System Description:
 
 
 ### NOTE: 
