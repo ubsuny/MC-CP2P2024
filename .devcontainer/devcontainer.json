@@ -1,29 +1,33 @@
 {
     "name": "Monte Carlo Simulation in Python",
     "image": "python:latest",
-    "extensions": [
-        "ms-python.python",
-        "donjayamanne.python-extension-pack",
-        "EditorConfig.EditorConfig"
-    ],
-    "settings": {
-        "python.pythonPath": "/usr/local/bin/python",
-        "python.linting.enabled": true,
-        "python.linting.pylintEnabled": true,
-        "python.formatting.provider": "autopep8",
-        "files.exclude": {
-            "**/*.pyc": true
-        },
-        "editor.tabSize": 4,
-        "editor.fontSize": 14,
-        "workbench.colorTheme": "Default Dark+",
-        "git.autofetch": true,
-        "git.enableSmartCommit": true,
-        "gitlens.codeLens.enabled": false,
-        "terminal.integrated.shell.linux": "/bin/bash",
-        "terminal.integrated.cursorBlinking": true,
-        "security.workspace.trust.enabled": true,
-        "security.workspace.trust.startupPrompt": "always"
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "donjayamanne.python-extension-pack",
+                "EditorConfig.EditorConfig"
+            ],
+            "settings": {
+                "python.pythonPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.provider": "autopep8",
+                "files.exclude": {
+                    "**/*.pyc": true
+                },
+                "editor.tabSize": 4,
+                "editor.fontSize": 14,
+                "workbench.colorTheme": "Default Dark+",
+                "git.autofetch": true,
+                "git.enableSmartCommit": true,
+                "gitlens.codeLens.enabled": false,
+                "terminal.integrated.shell.linux": "/bin/bash",
+                "terminal.integrated.cursorBlinking": true,
+                "security.workspace.trust.enabled": true,
+                "security.workspace.trust.startupPrompt": "always"
+            }
+        }
     },
     "postCreateCommand": "pip install numpy matplotlib scipy qutip"
 }
