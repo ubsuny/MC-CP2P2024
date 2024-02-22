@@ -1,0 +1,3 @@
+## Time Evolution and Quantum System Dynamics: Monte Carlo Solver with QuTip
+
+Rather than a experimental practice, this project is solely based on theoretical arguments.` Monte Carlo` simulations are frequently used in quantum mechanics to investigate the dynamics of quantum systems with numerical approach, particularly in situations when obtaining precise analytical answers is challenging or impossible. `QuTiP` (Quantum Toolbox in Python) is a robust Python package which used to simulate open quantum systems. It offers a range of functions for Monte Carlo simulations of quantum dynamics.
