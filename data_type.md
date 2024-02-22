@@ -9,3 +9,26 @@ It is possible for a `Qobj` to represent mixed or pure quantum states. It is ada
 - `Qobj`; quantum onjects will be utilized for quantum state with tensor function and annihilation operators for cavity and atom.
 - Within `Qobj`, Operators  and Options classes can be used.
 - The expectation values use the list of floating point numbers.
+
+### Example Usage: Python annotation:
+```
+from typing import List, Union
+import numpy as np
+import qutip as qt
+
+def evolve_system(time_points: np.ndarray,
+                   initial_state: qt.Qobj,
+                   hamiltonian: Union[np.ndarray, qt.Qobj, callable]) -> List[float]:
+    """
+    Evolves the quantum system over time using a given Hamiltonian.
+
+    Parameters:
+        time_points (np.ndarray): Array of time points.
+        initial_state (qt.Qobj): Initial quantum state of the system.
+        hamiltonian (Union[np.ndarray, qt.Qobj, callable]): Hamiltonian of the system,
+            represented as a numpy array, Qobj, or a function.
+
+    Returns:
+        List[float]: List of expectation values of observables at each time point.
+    """
+```
