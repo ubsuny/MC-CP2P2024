@@ -8,6 +8,9 @@ A two-level atom coupled to a leaky cavity usually refers to a system in which a
 - It has a ground state, let's say $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$.
 - While photons can be contained within the cavity, energy can also escape from it.
 
+### Applications:
+The two-level atom coupled to a leaky cavity is a model system widely used in quantum information processing, quantum communication, and quantum sensing. It serves as a platform for implementing basic quantum operations, such as qubit initialization, gates, and measurement, as well as more advanced protocols like quantum error correction and quantum state transfer.
+
 
 ### NOTE: 
 I am keeping references as they are, I will cite properly on the later time. This is just for keeping them safe here, will follow citation formats later on.
