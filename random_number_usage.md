@@ -1,9 +1,14 @@
 ## "A Two-Level Atom Coupled to a Leaky Cavity"
 In quantum mechanics, a two-state system (also known as a two-level system) is a quantum system that can exist in any quantum superposition of two independent (physically distinguishable) quantum states[^1].  The atom is basically described by a two-level quantum system. It has a ground state, let's say $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$. While photons can be contained within the cavity, energy can also escape from it. A limited area with mirrors at either end that permit photons to bounce back and forth is referred to as a `cavity`. Within the cavity, the two-level atom is connected to the electromagnetic field. Energy and data transfer between the atom and the cavity photons is made possible by this interaction.
 
+![Two Level Atom](https://www.researchgate.net/profile/Bashir-Mojaveri/publication/338576453/figure/fig1/AS:981415093104645@1610999000748/Schematic-structure-of-two-two-level-atoms-interacting-with-a-single-mode-cavity-field.png)
+
+<b><span style="font-size:larger">Figure 1:</span></b> <span style="font-size:larger">Schematic structure of two two-level atoms interacting with a single-mode cavity field, where atoms and cavity are driven by a local classical field[^2].</span>
+
+
 ## About `mcsolve`: Monte Carlo Solver:
 Wavefunction simulations from Monte Carlo are utilized to solve quantum systems with `mcsolve`. It can be used to simulate quantum jumps and stochastic processes in open quantum systems with non-deterministic evolution. `Random Numbers` are very crucial parts of this project, but instead of mannual generation, they are being internally developed by `mcsolve`. By selecting stochastic trajectories in accordance with the underlying quantum processes, `mcsolve` offers an approximate solution to the dynamics of the quantum system. Strong system-environment coupling and non-Markovian dynamics are handled by `mcsolve`, in contrast to `mesolve`.
-The Monte Carlo (MC) approach, also known as the quantum-jump approach to wave function evolution, allows one to simulate an individual realization of the dynamics of the system, while the density matrix formalism represents the ensemble average over many identical realizations of a quantum system. Here, the environment is continuously observed, causing the system wave function to undergo a sequence of quantum jumps that are dependent on the amount of knowledge the environmental measurements provide about the system's current state[^2]. The Evolution is generally governed by the Schrödinger equation with a non-Hermitian effective Hamiltonian:
+The Monte Carlo (MC) approach, also known as the quantum-jump approach to wave function evolution, allows one to simulate an individual realization of the dynamics of the system, while the density matrix formalism represents the ensemble average over many identical realizations of a quantum system. Here, the environment is continuously observed, causing the system wave function to undergo a sequence of quantum jumps that are dependent on the amount of knowledge the environmental measurements provide about the system's current state[^3]. The Evolution is generally governed by the Schrödinger equation with a non-Hermitian effective Hamiltonian:
 <center>
 
 H<sub>eff</sub> = H<sub>sys</sub> - iℏ/2 ∑<sub>i</sub> C<sup>+</sup><sub>n</sub>C<sub>n</sub>
@@ -53,15 +58,15 @@ plt.ylabel('Expectation values', fontsize=14)
 plt.legend(("cavity photon number", "atom excitation probability"))
 plt.show()
 ```
-During the Monte Carlo simulations, the `mcsolve` function itself generates the random numbers. The master equation, also known as the stochastic Schrödinger equation, for the quantum system is solved by the `mcsolve` function. A collection of random quantum trajectories represents the quantum system's evolution. Quantum jumps cause the quantum state to evolve stochastically at every time step in the simulation. The `mcsolve` function creates random numbers internally in order to replicate these stochastic quantum jumps. By picking random numbers to mimic quantum jumps and fluctuations in the system, the simulations are made stochastic[^6]. 
+During the Monte Carlo simulations, the `mcsolve` function itself generates the random numbers. The master equation, also known as the stochastic Schrödinger equation, for the quantum system is solved by the `mcsolve` function. A collection of random quantum trajectories represents the quantum system's evolution. Quantum jumps cause the quantum state to evolve stochastically at every time step in the simulation. The `mcsolve` function creates random numbers internally in order to replicate these stochastic quantum jumps. By picking random numbers to mimic quantum jumps and fluctuations in the system, the simulations are made stochastic[^4]. 
 
  ### Working of State Definitions and Operators (Qobj):
-- In the code, `fock(2, 0)` creates a state with no particles (0) in mode 2 and `fock(10, 5)` creates a state with five particles (5) in mode 10[^3]. 
-- `coherent(10, 2 - 1j)` creates a coherent state in the atom's mode (mode 10) with a specific amplitude and phase using the coherent operator[^4]. 
-- `qeye(2)` creates the identity matrix of size 2, representing the identity operator for the two-level atom in Qutip[^5]. 
-- `destroy(10)` creates the lowering operator for the atom (mode 10) using the destroy operator, which can decrease the number of excitations[^5]. 
-- `destroy(2)` creates the lowering operator for the cavity mode (mode 2) using the destroy operator[^5]. 
-- `sm.dag()` and `a.dag()` are the adjoint (dagger) operators of sm and a, respectively. They represent raising operators, which can increase the number of photons in the cavity and excitations in the atom, respectively[^5].
+- In the code, `fock(2, 0)` creates a state with no particles (0) in mode 2 and `fock(10, 5)` creates a state with five particles (5) in mode 10[^5]. 
+- `coherent(10, 2 - 1j)` creates a coherent state in the atom's mode (mode 10) with a specific amplitude and phase using the coherent operator[^6]. 
+- `qeye(2)` creates the identity matrix of size 2, representing the identity operator for the two-level atom in Qutip[^7]. 
+- `destroy(10)` creates the lowering operator for the atom (mode 10) using the destroy operator, which can decrease the number of excitations[^7]. 
+- `destroy(2)` creates the lowering operator for the cavity mode (mode 2) using the destroy operator[^7]. 
+- `sm.dag()` and `a.dag()` are the adjoint (dagger) operators of sm and a, respectively. They represent raising operators, which can increase the number of photons in the cavity and excitations in the atom, respectively[^7].
 
 ### Monte Carlo Solver Initialization:
 ```python
@@ -88,12 +93,15 @@ An `Options` object is created with the `rhs_reuse` parameter set to `True`. Wit
 
 [^1]: [Two State Quantum System](https://en.wikipedia.org/wiki/Two-state_quantum_system#:~:text=In%20quantum%20mechanics%2C%20a%20two,a%20system%20is%20two%2Ddimensional.)
 
-[^2]: [Monte Carlo Solver](https://qutip.org/docs/latest/guide/dynamics/dynamics-monte.html)
+[^2]: [Interaction of a para-Bose state with two two-level atoms: control of dissipation by a local classical field - Scientific Figure on ResearchGate.](https://www.researchgate.net/figure/Schematic-structure-of-two-two-level-atoms-interacting-with-a-single-mode-cavity-field_fig1_338576453 ) [accessed 8 Mar, 2024]
 
-[^3]: [Quantum State Functions](https://qutip.org/docs/latest/apidoc/functions.html?highlight=fock)
+[^3]: [Monte Carlo Solver](https://qutip.org/docs/latest/guide/dynamics/dynamics-monte.html)
 
-[^4]: [Qutip Coherent State](https://qutip.org/docs/latest/apidoc/functions.html?highlight=coherent#qutip.states.coherent_dm)
+[^4]: [Quantum Monte Carlo Method](http://info.phys.unm.edu/~ideutsch/Classes/Phys581S14/Lectures/Molmer2.pdf)
 
-[^5]: [Quantum Objects(Qobj)](https://qutip.org/docs/latest/apidoc/classes.html)
+[^5]: [Quantum State Functions](https://qutip.org/docs/latest/apidoc/functions.html?highlight=fock)
 
-[^6]: [Quantum Monte Carlo Method](http://info.phys.unm.edu/~ideutsch/Classes/Phys581S14/Lectures/Molmer2.pdf)
+[^6]: [Qutip Coherent State](https://qutip.org/docs/latest/apidoc/functions.html?highlight=coherent#qutip.states.coherent_dm)
+
+[^7]: [Quantum Objects(Qobj)](https://qutip.org/docs/latest/apidoc/classes.html)
+
