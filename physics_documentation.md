@@ -18,7 +18,7 @@ Generally, Atoms have discrete energy levels, and a two-level atom refers to an 
 A cavity, is a confined space between two mirrors that can trap electromagnetic fields, such as photons, within it. These modes are quantized, meaning they can only have certain discrete frequencies and energies. A two-level atom's charge distribution inside its structure gives it an electric dipole moment.  The two-level atom interacts with the cavity mode via its electric dipole moment. There is a photon-based electromagnetic field inside the cavity. Because of the mirrors at either end, these photons are contained within the cavity and are able to oscillate. The atom gains energy and changes to its excited state as it receives a photon from the electromagnetic field. On the other hand, the atom loses energy and returns to its ground state when it emits a photon. Photons from the electromagnetic field are either absorbed or emitted by the atom as it moves between its excited and ground states. **The energies of the cavity mode (photons), atoms and the interactions, all are governed by the Hamiltonian describing the system.**
 The Hamiltonian that describes the full system,
 
-$({\hat {H}}={\hat {H}}_{\text{field}}+{\hat {H}}_{\text{atom}}+{\hat {H}}_{\text{int}})$
+$(H=H_{\text{field}}+H_{\text{atom}}+H_{\text{int}})$
 
 consists of the cavity field Hamiltonian, the atomic excitation Hamiltonian, and the Jaynes–Cummings interaction Hamiltonian respectively[^3].
 
