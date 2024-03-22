@@ -8,10 +8,6 @@ A two-level atom coupled to a leaky cavity usually refers to a system in which a
 - It has a ground state, let's say $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$.
 - While photons can be contained within the cavity, energy can also escape from it.
 
-![Two level atom](Color-online-Schematic-structure-of-two-two-level-atoms-interacting-with-two-coupled.png)
-
-<b><span style="font-size:larger">Figure 1:</span></b> <span style="font-size:larger">Schematic structure of two two-level atoms interacting with two coupled modes in an optical cavity in the presence of atomic dipole-dipole coupling[^7].</span>
-
 ### Description:
 Generally, Atoms have discrete energy levels, and a two-level atom refers to an atom with two relevant energy states: a ground state $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$. Photons, usually in the optical or microwave frequency range, can be absorbed or emitted to trigger the transition between these two states[^1]. The system can absorb energy and change from the ground state to the "excited" state if the energy levels are not degenerate, or have unequal energies. An atom will periodically absorb photons from a coherent beam of light and reemit them through stimulated emission. A Rabi cycle is one such cycle, and the system's Rabi frequency is the inverse of its duration[^2]. The probability of finding the atom in the excited state is found from the Bloch equations to be:
  
@@ -41,7 +37,9 @@ Photon leakage, temperature fluctuations, and coupling to external modes are som
 These interactions can have a significant impact on the dynamics and stability of the system. For example, coupling to external modes can cause energy exchange and entanglement between the atom-cavity system and its surroundings.
 System-environment interactions also influence the timeframes and efficiency of quantum processes as photon emission, absorption, and coherent control[^6].
 
+![Two level atom](Color-online-Schematic-structure-of-two-two-level-atoms-interacting-with-two-coupled.png)
 
+<b><span style="font-size:larger">Figure 1:</span></b> <span style="font-size:larger">Schematic structure of two two-level atoms interacting with two coupled modes in an optical cavity in the presence of atomic dipole-dipole coupling[^7].</span>
 
 
 
