@@ -132,7 +132,9 @@ The visualization of this code can be done in [mc_simulation_2level_system.ipynb
 
 <b><span style="font-size:larger">Figure 2:</span></b> <span style="font-size:larger">Monte Carlo Time Evolution</span>
 
+This is the result of  Monte Carlo simulation of the system consisting of a cavity mode  interacting with a two-level atom. The x-axis represents time, while the y-axis depicts the expectation values of two observables: the number of cavity photons and the probability of the atom being excited. The solid lines and dashed represent the data from the first simulation (`data1`), where the initial state `psi0` is prepared and the data from the second simulation (`data2`), where a different initial state `psi1` is prepared.
 
+The expectation value of the atomic excitation probability changes with time between 0 and 1. The interaction term in the Hamiltonian causes the excitation to bounce between the cavity mode and the atom.
 
 
 
