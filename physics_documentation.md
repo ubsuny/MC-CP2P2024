@@ -15,15 +15,28 @@ Generally, Atoms have discrete energy levels, and a two-level atom refers to an 
 
  where ${\displaystyle \omega }$ is the Rabi frequency.
 
-A cavity, is a confined space between two mirrors that can trap electromagnetic fields, such as photons, within it. These modes are quantized, meaning they can only have certain discrete frequencies and energies. A two-level atom's charge distribution inside its structure gives it an electric dipole moment.  The two-level atom interacts with the cavity mode via its electric dipole moment. There is a photon-based electromagnetic field inside the cavity. Because of the mirrors at either end, these photons are contained within the cavity and are able to oscillate. The atom gains energy and changes to its excited state as it receives a photon from the electromagnetic field. On the other hand, the atom loses energy and returns to its ground state when it emits a photon. Photons from the electromagnetic field are either absorbed or emitted by the atom as it moves between its excited and ground states. **The energies of the cavity mode (photons), atoms and the interactions, all are governed by the Hamiltonian describing the system.**
+A cavity, is a confined space between two mirrors that can trap electromagnetic fields, such as photons, within it. These modes are quantized, meaning they can only have certain discrete frequencies and energies. A two-level atom's assymetric charge distribution inside its structure gives it an electric dipole moment.  The two-level atom interacts with the cavity mode via its electric dipole moment. There is a photon-based electromagnetic field inside the cavity. Because of the mirrors at either end, these photons are contained within the cavity and are able to oscillate. The atom gains energy and changes to its excited state as it receives a photon from the electromagnetic field. On the other hand, the atom loses energy and returns to its ground state when it emits a photon. Photons from the electromagnetic field are either absorbed or emitted by the atom as it moves between its excited and ground states. **The energies of the cavity mode (photons), atoms and the interactions, all are governed by the Hamiltonian describing the system.**
 The Hamiltonian that describes the full system,
 
-$(H=H_{\text{field}}+H_{\text{atom}}+H_{\text{int}})$
+$H=H_{\text{field}}+H_{\text{atom}}+H_{\text{int}}$
 
 consists of the cavity field Hamiltonian, the atomic excitation Hamiltonian, and the Jaynes–Cummings interaction Hamiltonian respectively[^3].
 
 
-A cavity that is not completely sealed off from its surroundings is referred to as a **leaky cavity**. It causes dissipation and energy loss by allowing photons to leave the cavity. There are a number of ways that photons can leak into the surrounding area, including connection to external waveguides or faulty mirrors.
+A cavity that is not completely sealed off from its surroundings is referred to as a **leaky cavity**. It causes dissipation and energy loss by allowing photons to leave the cavity. There are a number of ways that photons can leak into the surrounding area, including connection to external waveguides or faulty mirrors. The Hamiltonian of the Jaynes-Cummings interaction represents the coupling term. Their coupling strength determines the strength of the interaction between the cavity mode and the atom. This term plays a role in the energy exchange between two level systems (atoms) and bosonic (cavity mode photons)[^3].
+
+### Observations:
+**1. Decoherence:**
+As a result of interactions with its surroundings, the quantum system loses its coherence, or capacity to retain superposition states(decoherence). In the case of an atom coupled to a leaky cavity, decoherence might result from the interaction of the atom-cavity system with external influences such as thermal fluctuations, photon leakage, or coupling to other degrees of freedom. Photons that leak out of the cavity or interact with external modes contain information about the atom-cavity system's quantum state. This causes a loss of phase information and coherence in the system[^4].
+
+**2. Dissipation:**
+Dissipation is the irreversible loss of energy from a quantum system to its environment. In the case of the atom-cavity system, dissipation is principally caused by photon leakage from the cavity into the surroundings. The leaky cavity allows photons to escape, reducing the energy stored in the cavity mode and increasing the entropy of the surroundings. Dissipation dampens coherent oscillations in the atom-cavity system, such as Rabi oscillations or coherent photon emission, which eventually leads to thermal equilibrium with the environment[^5].
+
+**3. System-Environment Interactions:**
+Photon leakage, temperature fluctuations, and coupling to external modes are some of the ways in which the atom-cavity system interacts with its environment.
+These interactions can have a significant impact on the dynamics and stability of the system. For example, coupling to external modes can cause energy exchange and entanglement between the atom-cavity system and its surroundings.
+System-environment interactions also influence the timeframes and efficiency of quantum processes as photon emission, absorption, and coherent control[^6].
+
 
 
 
@@ -48,4 +61,12 @@ I am keeping references as they are, I will cite properly on the later time. Thi
 [^1]: [Haroche, S., & Raimond, J.-M. (2006). Exploring the Quantum: Atoms, Cavities, and Photons. Oxford University Press. [ISBN: 978-0198509141]](http://math0.bnu.edu.cn/~zhengc/material/macsoft/ebooksclub.org__Exploring_the_Quantum__Atoms__Cavities__and_Photons__Oxford_Graduate_Texts_.pdf)
 
 [^2]: [Rabi cycle/ Oscillation](https://en.wikipedia.org/wiki/Rabi_cycle)
+
 [^3]: [Jaynes-Cummings Model](https://en.wikipedia.org/wiki/Jaynes%E2%80%93Cummings_model)
+
+[^4]: [Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. Reviews of Modern Physics, 75(3), 715-775. doi:10.1103/RevModPhys.75.715](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.715)
+
+[^5]: [Gardiner, C. W., & Zoller, P. (2004). Quantum Noise: A Handbook of Markovian and Non-Markovian Quantum Stochastic Methods with Applications to Quantum Optics. Springer. [ISBN: 978-3540223011]](https://books.google.com/books/about/Quantum_Noise.html?id=a_xsT8oGhdgC)
+
+[^6]: [Breuer, H. P., & Petruccione, F. (2002). The Theory of Open Quantum Systems. Oxford University Press. [ISBN: 978-0199213900]](http://info.phys.unm.edu/~ideutsch/Classes/Phys581S23/Reference%20Material%EF%80%A8/Heinz-Peter%20Breuer,%20Francesco%20Petruccione%20-%20The%20Theory%20of%20Open%20Quantum%20Systems.pdf)
+
