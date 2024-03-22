@@ -8,6 +8,10 @@ A two-level atom coupled to a leaky cavity usually refers to a system in which a
 - It has a ground state, let's say $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$.
 - While photons can be contained within the cavity, energy can also escape from it.
 
+![Two level atom](Color-online-Schematic-structure-of-two-two-level-atoms-interacting-with-two-coupled.png)
+
+<b><span style="font-size:larger">Figure 1:</span></b> <span style="font-size:larger">Schematic structure of two two-level atoms interacting with two coupled modes in an optical cavity in the presence of atomic dipole-dipole coupling[^7].</span>
+
 ### Description:
 Generally, Atoms have discrete energy levels, and a two-level atom refers to an atom with two relevant energy states: a ground state $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$. Photons, usually in the optical or microwave frequency range, can be absorbed or emitted to trigger the transition between these two states[^1]. The system can absorb energy and change from the ground state to the "excited" state if the energy levels are not degenerate, or have unequal energies. An atom will periodically absorb photons from a coherent beam of light and reemit them through stimulated emission. A Rabi cycle is one such cycle, and the system's Rabi frequency is the inverse of its duration[^2]. The probability of finding the atom in the excited state is found from the Bloch equations to be:
  
@@ -70,3 +74,4 @@ I am keeping references as they are, I will cite properly on the later time. Thi
 
 [^6]: [Breuer, H. P., & Petruccione, F. (2002). The Theory of Open Quantum Systems. Oxford University Press. [ISBN: 978-0199213900]](http://info.phys.unm.edu/~ideutsch/Classes/Phys581S23/Reference%20Material%EF%80%A8/Heinz-Peter%20Breuer,%20Francesco%20Petruccione%20-%20The%20Theory%20of%20Open%20Quantum%20Systems.pdf)
 
+[^7]: [The influence of atomic dipole–dipole interaction on the dynamics of the population inversion and entanglement of two atoms interacting non-resonantly with two coupled modes field - Scientific Figure on ResearchGate. Available from: https://www.researchgate.net/figure/Color-online-Schematic-structure-of-two-two-level-atoms-interacting-with-two-coupled_fig4_313937868 [accessed 22 Mar, 2024]](https://www.researchgate.net/figure/Color-online-Schematic-structure-of-two-two-level-atoms-interacting-with-two-coupled_fig4_313937868)
