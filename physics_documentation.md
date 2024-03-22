@@ -15,7 +15,18 @@ Generally, Atoms have discrete energy levels, and a two-level atom refers to an 
 
  where ${\displaystyle \omega }$ is the Rabi frequency.
 
-A cavity, is a confined space between two mirrors that can trap electromagnetic fields, such as photons, within it. These modes are quantized, meaning they can only have certain discrete frequencies and energies.
+A cavity, is a confined space between two mirrors that can trap electromagnetic fields, such as photons, within it. These modes are quantized, meaning they can only have certain discrete frequencies and energies. A two-level atom's charge distribution inside its structure gives it an electric dipole moment.  The two-level atom interacts with the cavity mode via its electric dipole moment. There is a photon-based electromagnetic field inside the cavity. Because of the mirrors at either end, these photons are contained within the cavity and are able to oscillate. The atom gains energy and changes to its excited state as it receives a photon from the electromagnetic field. On the other hand, the atom loses energy and returns to its ground state when it emits a photon. Photons from the electromagnetic field are either absorbed or emitted by the atom as it moves between its excited and ground states. **The energies of the cavity mode (photons), atoms and the interactions, all are governed by the Hamiltonian describing the system.**
+The Hamiltonian that describes the full system,
+
+${\hat {H}}={\hat {H}}_{\text{field}}+{\hat {H}}_{\text{atom}}+{\hat {H}}_{\text{int}}$
+
+consists of the cavity field Hamiltonian, the atomic excitation Hamiltonian, and the Jaynes–Cummings interaction Hamiltonian respectively[^3].
+
+
+A cavity that is not completely sealed off from its surroundings is referred to as a **leaky cavity**. It causes dissipation and energy loss by allowing photons to leave the cavity. There are a number of ways that photons can leak into the surrounding area, including connection to external waveguides or faulty mirrors.
+
+
+
 
 
 
@@ -37,3 +48,4 @@ I am keeping references as they are, I will cite properly on the later time. Thi
 [^1]: [Haroche, S., & Raimond, J.-M. (2006). Exploring the Quantum: Atoms, Cavities, and Photons. Oxford University Press. [ISBN: 978-0198509141]](http://math0.bnu.edu.cn/~zhengc/material/macsoft/ebooksclub.org__Exploring_the_Quantum__Atoms__Cavities__and_Photons__Oxford_Graduate_Texts_.pdf)
 
 [^2]: [Rabi cycle/ Oscillation](https://en.wikipedia.org/wiki/Rabi_cycle)
+[^3]: [Jaynes-Cummings Model](https://en.wikipedia.org/wiki/Jaynes%E2%80%93Cummings_model)
