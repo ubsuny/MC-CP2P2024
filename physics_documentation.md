@@ -58,7 +58,7 @@ MCSolve utilizes wavefunction simulations from Monte Carlo to solve quantum syst
 - Selecting Stochastic trajectories
 - Determine the outcomes of quantum jump
 
-More details on the application of random numbers can be found in [random_number_usage.md](https://github.com/ubsuny/MC-CP2P2024/blob/main/mc_simulation_2level_system.ipynb).
+More details on the application of random numbers can be found in [random_number_usage.md](https://github.com/ubsuny/MC-CP2P2024/blob/main/random_number_usage.md).
 
 ### Coding part:
 
