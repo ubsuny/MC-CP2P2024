@@ -100,6 +100,10 @@ plt.show()
 - The simulation is performed again using the same Hamiltonian and collapse operators, but with the option `rhs_reuse=True` to reuse the pre-computed time evolution operator.
 - The expectation values of the cavity photon number (`a.dag() * a`) and the atom excitation probability (`sm.dag() * sm`) are plotted as functions of time for both simulations (`data1, data2`).
 
+### About fock:
+In QuTiP, the fock function is used to generate a Fock state, which is a sort of quantum state that represents the occupation of discrete energy levels in a quantum system, such as those of a harmonic oscillator or a cavity mode. The fock function takes two arguments: the total number of Fock state levels `N` and the occupation number `n` of the desired Fock state.
+It returns the quantum state representing the n-photon Fock state in an N-dimensional Fock space. `N` represents the total number of levels in the Fock space. This value specifies the maximum number of photons or excitations that the system may have whereas `n` is the number of occupations in the intended Fock state. This quantity represents the number of photons or excitations in the state. In the above code, creating the 5-photon Fock state inside a 10-dimensional Fock space by calling fock(10, 5) represents a quantum state in which the system has 5 photons. The returned quantum object can then be used to describe the quantum state of a system with a cavity mode, where the cavity can contain up to 10 photons.  Variation in the cavity- atom interaction can be obv=served when the fock function is varied.
+
 ### Photon and Atom:
 The photon and atom are represented as quantum objects using the QuTiP library. 
 
@@ -132,32 +136,47 @@ The visualization of this code can be done in [mc_simulation_2level_system.ipynb
 
 <b><span style="font-size:larger">Figure 2:</span></b> <span style="font-size:larger">Monte Carlo Time Evolution</span>
 
-This is the result of  Monte Carlo simulation of the system consisting of a cavity mode  interacting with a two-level atom. The x-axis represents time, while the y-axis depicts the expectation values of two observables: the number of cavity photons and the probability of the atom being excited. The solid lines and dashed represent the data from the first simulation (`data1`), where the initial state `psi0` is prepared and the data from the second simulation (`data2`), where a different initial state `psi1` is prepared.
+This is the result of  Monte Carlo simulation of the system consisting of a cavity mode  interacting with a two-level atom. The x-axis represents time, while the y-axis depicts the expectation values of two observables: the number of cavity photons and the probability of the atom being excited. The solid lines and dashed lines represent the data from the first simulation (`data1`), where the initial state `psi0` is prepared and the data from the second simulation (`data2`), where a different initial state `psi1` is prepared respectively.
 
-The expectation value of the atomic excitation probability changes with time between 0 and 1. The interaction term in the Hamiltonian causes the excitation to bounce between the cavity mode and the atom.
+The expectation value of the atomic excitation probability changes with time between 0 and 1. The interaction term (`2*np.pi*0.25*(sm*a.dag() + sm.dag()*a)`)in the Hamiltonian causes the excitation to bounce between the cavity mode and the atom. If the atom begins in an excited state (higher energy) and the cavity has fewer photons (less energy), the interaction term favors transferring the excitation to the cavity, raising the cavity photon number. However, if the atom starts in its ground state and the cavity already has a large number of photons in comparison to the atomic energy level, the interaction may favor transmitting excitation from the cavity to the atom, resulting in a decrease in cavity photon number.
 
+The atom starts in its ground state (no excitation), and the cavity contains 5 photons. Initially, the cavity contains more energy than the atom. The interaction favors passing some excitations from the cavity to the atom, resulting in a drop in cavity photon number. The oscillation of the atom excitation probability from 0 to 1 results in the decrease in cavity photon number, and vice versa. Regardless of initial conditions, the trend in both figures indicates a net transfer of excitations from the cavity to the atom over time, resulting in a fall in cavity photon number. This decline may finally achieve a stable state in which the excitation exchange between the cavity and the atom is balanced. It's worth noting that the y-axis most likely represents the cavity photon number's expectation value. This statistic represents the average number of photons in the cavity at a given time, rather than the exact quantity in any one simulation session.  The observed fall in expected value shows that the cavity loses photons on average over time as a result of its interaction with the atom and considering the leaky cavity.
 
+The simulation of the two level atom coupled to a leaky cavity has been repeated by varying various parameters. With changes, the general trend of the plot has been found very similar.
 
+#### 1. Varying the time  `times = np.linspace(0.0, 20.0, 500)`: 
+An array of 500 time points linearly spaced between 0 and 20.
 
+![alt text](mc1.png)
 
+#### 2. Varing the total number of Fock state levels `N` for atom; `fock(5, 0)`:
 
+![alt text](mc2.png)
 
+#### 3. Altering the occupance number of the Fock state level `n` for photon; `psi0 = tensor(fock(2, 0), fock(10, 8))`:
 
+![alt text](mc3.png)
+
+#### 4. Increasing the coupling strength from 0.25 to 0.8:
+`H = 2*np.pi*a.dag()*a + 2*np.pi*sm.dag()*sm + 2*np.pi*0.8*(sm*a.dag() + sm.dag()*a)`
+
+![alt text](mc4.png)
+
+#### 5. Increasing the noise/ leaky term with increased copling strength:
+```python 
+H = 2*np.pi*a.dag()*a + 2*np.pi*sm.dag()*sm + 2*np.pi*0.8*(sm*a.dag() + sm.dag()*a)
+data1 = mcsolve(H, psi0, times, [np.sqrt(0.5) * a], [a.dag() * a, sm.dag() * sm])
+psi1 = tensor(fock(2, 0), coherent(10, 2 - 1j))
+opts = Options(rhs_reuse=True) # Run a second time, reusing RHS
+data2 = mcsolve(H, psi1, times, [np.sqrt(0.5) * a], [a.dag() * a, sm.dag() * sm], options=opts)
+```
+
+![alt text](mc5.png)
 
 
 
 ### Applications:
 The two-level atom coupled to a leaky cavity is a model system widely used in quantum information processing, quantum communication, and quantum sensing. It serves as a platform for implementing basic quantum operations, such as qubit initialization, gates, and measurement, as well as more advanced protocols like quantum error correction and quantum state transfer.
-
-
-### NOTE: 
-I am keeping references as they are, I will cite properly on the later time. This is just for keeping them safe here, will follow citation formats later on.
-### Bibliography:
-1. [Monte Carlo Solver](https://qutip.org/docs/latest/guide/dynamics/dynamics-monte.html)
-2. [On the simultaneous scattering of two photons by a single two-level atom](https://www.nature.com/articles/s41566-023-01260-7)
-3. [An atom in a cavity](https://phys.libretexts.org/Bookshelves/Quantum_Mechanics/Advanced_Quantum_Mechanics_(Kok)/09%3A_New_Page/9.3%3A_An_Atom_in_a_Cavity)
-4. [Solving Problems with Time-dependent Hamiltonians](https://qutip.org/docs/latest/guide/dynamics/dynamics-time.html#time)
-5. [Cavity Quantum Electrodynamics](https://link.springer.com/chapter/10.1007/978-3-540-34572-5_5)
 
 
 ### References:
@@ -178,3 +197,11 @@ I am keeping references as they are, I will cite properly on the later time. Thi
 [^8]: [Monte Carlo Method](https://en.wikipedia.org/wiki/Monte_Carlo_method)
 
 [^9]: [Quantum Jump Method](https://en.wikipedia.org/wiki/Quantum_jump_method)
+
+### Bibliography:
+1. [Monte Carlo Solver](https://qutip.org/docs/latest/guide/dynamics/dynamics-monte.html)
+2. [On the simultaneous scattering of two photons by a single two-level atom](https://www.nature.com/articles/s41566-023-01260-7)
+3. [An atom in a cavity](https://phys.libretexts.org/Bookshelves/Quantum_Mechanics/Advanced_Quantum_Mechanics_(Kok)/09%3A_New_Page/9.3%3A_An_Atom_in_a_Cavity)
+4. [Solving Problems with Time-dependent Hamiltonians](https://qutip.org/docs/latest/guide/dynamics/dynamics-time.html#time)
+5. [Cavity Quantum Electrodynamics](https://link.springer.com/chapter/10.1007/978-3-540-34572-5_5)
+
