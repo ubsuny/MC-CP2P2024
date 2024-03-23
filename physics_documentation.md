@@ -130,7 +130,7 @@ The given The Hamiltonian represents the dynamics of a system that combines a ca
 - Coupling Strength : 0.25 coupling strength coefficient(which can be adjusted to see varied result), strength of interaction
 
 ### Visualization and Interpretation:
-The visualization of this code can be done in [mc_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/f1261cbfb14d94e2c6492aec60893d6b18399063/mc_simulation_2level_system.ipynb).
+The visualization of this code can be done in [mc_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/56f3e126c70c4904f2cc58f9390771fa49e5f53a/mc_simulation_2level_system.ipynb).
 
 ![expectations_time](visuals/mc.png)
 

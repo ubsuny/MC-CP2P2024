@@ -32,7 +32,7 @@ Where P<sub>n</sub> can be calculated using: P<sub>i</sub>(t) = ⟨ψ(t)|C<sup>+
 5. By selecting a new random number, repeat the above process until the final simulation time is achieved, using the renormalized state from the previous step as the new initial condition at time τ . 
 
 ## Code Snippets:
-The visualization of this code can be done in [mc_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/main/mc_simulation_2level_system.ipynb).
+The visualization of this code can be done in [mc_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/56f3e126c70c4904f2cc58f9390771fa49e5f53a/mc_simulation_2level_system.ipynb).
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
