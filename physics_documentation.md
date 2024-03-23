@@ -37,7 +37,7 @@ Photon leakage, temperature fluctuations, and coupling to external modes are som
 These interactions can have a significant impact on the dynamics and stability of the system. For example, coupling to external modes can cause energy exchange and entanglement between the atom-cavity system and its surroundings.
 System-environment interactions also influence the timeframes and efficiency of quantum processes as photon emission, absorption, and coherent control[^6].
 
-![Two level atom](Color-online-Schematic-structure-of-two-two-level-atoms-interacting-with-two-coupled.png)
+![Two level atom](visuals/Color-online-Schematic-structure-of-two-two-level-atoms-interacting-with-two-coupled.png)
 
 <b><span style="font-size:larger">Figure 1:</span></b> <span style="font-size:larger">Schematic structure of two two-level atoms interacting with two coupled modes in an optical cavity in the presence of atomic dipole-dipole coupling[^7].</span>
 
@@ -132,7 +132,7 @@ The given The Hamiltonian represents the dynamics of a system that combines a ca
 ### Visualization and Interpretation:
 The visualization of this code can be done in [mc_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/f1261cbfb14d94e2c6492aec60893d6b18399063/mc_simulation_2level_system.ipynb).
 
-![expectations_time](mc.png)
+![expectations_time](visuals/mc.png)
 
 <b><span style="font-size:larger">Figure 2:</span></b> <span style="font-size:larger">Monte Carlo Time Evolution</span>
 
@@ -147,20 +147,20 @@ The simulation of the two level atom coupled to a leaky cavity has been repeated
 #### 1. Varying the time  `times = np.linspace(0.0, 20.0, 500)`: 
 An array of 500 time points linearly spaced between 0 and 20.
 
-![alt text](mc1.png)
+![alt text](visuals/mc1.png)
 
 #### 2. Varing the total number of Fock state levels `N` for atom; `fock(5, 0)`:
 
-![alt text](mc2.png)
+![alt text](visuals/mc2.png)
 
 #### 3. Altering the occupance number of the Fock state level `n` for photon; `psi0 = tensor(fock(2, 0), fock(10, 8))`:
 
-![alt text](mc3.png)
+![alt text](visuals/mc3.png)
 
 #### 4. Increasing the coupling strength from 0.25 to 0.8:
 `H = 2*np.pi*a.dag()*a + 2*np.pi*sm.dag()*sm + 2*np.pi*0.8*(sm*a.dag() + sm.dag()*a)`
 
-![alt text](mc4.png)
+![alt text](visuals/mc4.png)
 
 #### 5. Increasing the noise/ leaky term with increased copling strength:
 ```python 
@@ -171,7 +171,7 @@ opts = Options(rhs_reuse=True) # Run a second time, reusing RHS
 data2 = mcsolve(H, psi1, times, [np.sqrt(0.5) * a], [a.dag() * a, sm.dag() * sm], options=opts)
 ```
 
-![alt text](mc5.png)
+![alt text](visuals/mc5.png)
 
 
 

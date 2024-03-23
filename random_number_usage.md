@@ -1,7 +1,7 @@
 ## "A Two-Level Atom Coupled to a Leaky Cavity"
 In quantum mechanics, a two-state system (also known as a two-level system) is a quantum system that can exist in any quantum superposition of two independent (physically distinguishable) quantum states[^1].  The atom is basically described by a two-level quantum system. It has a ground state, let's say $\left| g \right\rangle$ and an excited state $\left| e \right\rangle$. While photons can be contained within the cavity, energy can also escape from it. A limited area with mirrors at either end that permit photons to bounce back and forth is referred to as a `cavity`. Within the cavity, the two-level atom is connected to the electromagnetic field. Energy and data transfer between the atom and the cavity photons is made possible by this interaction.
 
-![Two Level Atom](Schematic-structure-of-two-two-level-atoms-interacting-with-a-single-mode-cavity-field.png)
+![Two Level Atom](visuals/Schematic-structure-of-two-two-level-atoms-interacting-with-a-single-mode-cavity-field.png)
 
 <b><span style="font-size:larger">Figure 1:</span></b> <span style="font-size:larger">Schematic structure of two two-level atoms interacting with a single-mode cavity field, where atoms and cavity are driven by a local classical field[^2].</span>
 
