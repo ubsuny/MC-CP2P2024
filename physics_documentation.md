@@ -48,7 +48,7 @@ The Monte Carlo Simulation of **"a two-level atom coupled to a leaky cavity"** i
 MCSolve utilizes wavefunction simulations from Monte Carlo to solve quantum systems, enabling the study of stochastic processes and quantum jumps in open quantum systems with non-deterministic evolution. The quantum jump technique is a variation on the master-equation treatment that focuses on evolving the system's wave function rather than employing density matrix formalism. In this method, the system's wave function is evolved in time using a pseudo-Hamiltonian, with each time step potentially involving a quantum leap, which represents a discontinuous change. This generates quantum trajectories, which represent the system's state as a function of time. By averaging many simulated trajectories, the appropriate density matrix as a function of time can be calculated. In systems with a Hilbert space of size N, the number of wave function components equals N, and the number of density matrix components equals $N^2$[^9]. 
 
 ### Random Numbers Usage
-`Random Numbers` are very crucial parts of this project, but instead of mannual generation, they are being internally developed by `mcsolve`. By selecting stochastic trajectories in accordance with the underlying quantum processes, `mcsolve` offers an approximate solution to the dynamics of the quantum system.
+`Random Numbers` are very crucial parts of this project, but instead of manual generation, they are being internally developed by `mcsolve`. By selecting stochastic trajectories in accordance with the underlying quantum processes, `mcsolve` offers an approximate solution to the dynamics of the quantum system.
 
 - Utilized to introduce probabilistic behavior into the simulation
 - Represent quantum jumps, spontaneous emission
@@ -58,7 +58,7 @@ MCSolve utilizes wavefunction simulations from Monte Carlo to solve quantum syst
 - Selecting Stochastic trajectories
 - Determine the outcomes of quantum jump
 
-More details on the application of random numbers can be found in [random_number_usage.md](https://github.com/ubsuny/MC-CP2P2024/blob/main/random_number_usage.md).
+More details on the application of random numbers can be found in [random_number_usage.md](https://github.com/ubsuny/MC-CP2P2024/blob/main/mc_simulation_2level_system.ipynb).
 
 ### Coding part:
 

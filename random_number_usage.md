@@ -7,7 +7,7 @@ In quantum mechanics, a two-state system (also known as a two-level system) is a
 
 
 ## About `mcsolve`: Monte Carlo Solver:
-Wavefunction simulations from Monte Carlo are utilized to solve quantum systems with `mcsolve`. It can be used to simulate quantum jumps and stochastic processes in open quantum systems with non-deterministic evolution. `Random Numbers` are very crucial parts of this project, but instead of mannual generation, they are being internally developed by `mcsolve`. By selecting stochastic trajectories in accordance with the underlying quantum processes, `mcsolve` offers an approximate solution to the dynamics of the quantum system. Strong system-environment coupling and non-Markovian dynamics are handled by `mcsolve`, in contrast to `mesolve`.
+Wavefunction simulations from Monte Carlo are utilized to solve quantum systems with `mcsolve`. It can be used to simulate quantum jumps and stochastic processes in open quantum systems with non-deterministic evolution. `Random Numbers` are very crucial parts of this project, but instead of manual generation, they are being internally developed by `mcsolve`. By selecting stochastic trajectories in accordance with the underlying quantum processes, `mcsolve` offers an approximate solution to the dynamics of the quantum system. Strong system-environment coupling and non-Markovian dynamics are handled by `mcsolve`, in contrast to `mesolve`.
 The Monte Carlo (MC) approach, also known as the quantum-jump approach to wave function evolution, allows one to simulate an individual realization of the dynamics of the system, while the density matrix formalism represents the ensemble average over many identical realizations of a quantum system. Here, the environment is continuously observed, causing the system wave function to undergo a sequence of quantum jumps that are dependent on the amount of knowledge the environmental measurements provide about the system's current state[^3]. The Evolution is generally governed by the Schrödinger equation with a non-Hermitian effective Hamiltonian:
 <center>
 
@@ -32,7 +32,7 @@ Where P<sub>n</sub> can be calculated using: P<sub>i</sub>(t) = ⟨ψ(t)|C<sup>+
 5. By selecting a new random number, repeat the above process until the final simulation time is achieved, using the renormalized state from the previous step as the new initial condition at time τ . 
 
 ## Code Snippets:
-The visualization of this code can be done in [mc_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/f1261cbfb14d94e2c6492aec60893d6b18399063/mc_simulation_2level_system.ipynb).
+The visualization of this code can be done in [mc_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/main/mc_simulation_2level_system.ipynb).
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
