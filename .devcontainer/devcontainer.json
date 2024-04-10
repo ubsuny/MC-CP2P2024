@@ -29,5 +29,5 @@
             }
         }
     },
-    "postCreateCommand": "pip install numpy matplotlib scipy qutip"
+    "postCreateCommand": "pip install numpy matplotlib scipy qutip tensorflow tensorflow-quantum"
 }
