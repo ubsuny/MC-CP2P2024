@@ -1,0 +1,36 @@
+QuTiP is specifically designed for quantum physics simulations, leveraging quantum operators, states, and solvers like mcsolve for Monte Carlo simulations. TensorFlow, while powerful for numerical computations and especially optimized for machine learning tasks, does not natively support quantum physics concepts.
+Therefore, a direct translation that runs "as-is" and gives the same plot output with equivalent time dynamics isn't straightforward.
+
+However, we can approximate certain aspects of the computation using TensorFlow, particularly matrix operations and differential equation solving. For a quantum simulation, we have to manually implement the dynamics (e.g., solving the Schrödinger equation) without the high-level abstractions QuTiP provides.
+
+## Tensorflow:
+Let's approach simulating a simplified version of quantum dynamics using TensorFlow. I will not implement tensorflow to the main code of the project, because it doesnot have any significant effect, rather use an example. The example won't fully replicate  QuTiP code's quantum behavior but will illustrate how to use TensorFlow for complex-valued matrix operations and basic time evolution.
+The whole variety of initial states and operators, as well as certain characteristics unique to quantum mechanics, such as Monte Carlo wave function approaches, will not be included in this substantial simplification. 
+```python
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+
+H = tf.constant([[1.0, 0.5], [0.5, 1.0]], dtype=tf.complex128)
+psi0 = tf.constant([1.0, 0.0], dtype=tf.complex128)
+
+def evolve(state, H, dt):
+    U = tf.linalg.expm(-1j * H * dt)
+    return tf.linalg.matvec(U, state)
+
+times = np.linspace(0, 10, 200)
+dt = times[1] - times[0]  # Time step
+
+states = [psi0]
+
+probs = [tf.abs(state)**2 for state in states]
+
+plt.figure()
+plt.plot(times, [prob[0].numpy() for prob in probs], label="State 0 Probability")
+plt.plot(times, [prob[1].numpy() for prob in probs], label="State 1 Probability")
+plt.title('Simplified Quantum Time Evolution with TensorFlow')
+plt.xlabel('Time')
+plt.ylabel('Probability')
+plt.legend()
+plt.show()
+```
