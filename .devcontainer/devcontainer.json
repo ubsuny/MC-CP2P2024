@@ -1,6 +1,6 @@
 {
     "name": "Monte Carlo Simulation in Python",
-    "image": "python:3.9",
+    "image": "python:latest",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -29,5 +29,5 @@
             }
         }
     },
-    "postCreateCommand": "pip install numpy matplotlib scipy qutip tensorflow tensorflow-quantum"
+    "postCreateCommand": "pip install numpy matplotlib scipy qutip tensorflow"
 }
