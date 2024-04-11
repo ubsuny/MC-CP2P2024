@@ -3,7 +3,7 @@ Therefore, a direct translation that runs "as-is" and gives the same plot output
 
 I tried applying the tensorflow approach  by implementing tensorflow quantum library within the python but it appeared like certain notations are not followed by qutip. Also there could be a drawback for this project to use tensorflow, because I have been using the latest python version, however, the tensorflow quantum is only supported on Python 3.7, 3.8, and 3.9[^1].
 
-![alt text](<visuals\devcontainer.png>)
+![alt text](<visuals/devcontainer.png>)
 
 However, we can approximate certain aspects of the computation using TensorFlow, particularly matrix operations and differential equation solving. For a quantum simulation, we have to manually implement the dynamics (e.g., solving the Schrödinger equation) without the high-level abstractions QuTiP provides.
 
