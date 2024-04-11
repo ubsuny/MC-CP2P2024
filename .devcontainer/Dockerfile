@@ -1,5 +1,5 @@
 # Use the specified Python base image
-FROM python:3.11.5
+FROM python:3.9
 
 # Set environment variables
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
