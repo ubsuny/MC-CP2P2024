@@ -1,5 +1,9 @@
 QuTiP is specifically designed for quantum physics simulations, leveraging quantum operators, states, and solvers like mcsolve for Monte Carlo simulations. TensorFlow, while powerful for numerical computations and especially optimized for machine learning tasks, does not natively support quantum physics concepts.
-Therefore, a direct translation that runs "as-is" and gives the same plot output with equivalent time dynamics isn't straightforward.
+Therefore, a direct translation that runs "as-is" and gives the same plot output with equivalent time dynamics isn't straightforward. TensorFlow is generally meant for deep learning tasks; unlike QuTiP (Quantum Toolbox in Python), it is not explicitly made for quantum dynamics simulations, so implementing it in the code available in [ms_simulation_2level_system.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/main/mc_simulation_2level_system.ipynb) does not necessarily make it better. 
+
+I tried applying the tensorflow approach  by implementing tensorflow quantum library within the python but it appeared like certain notations are not followed by qutip. Also there could be a drawback for this project to use tensorflow, because I have been using the latest python version, however, the tensorflow quantum is only supported on Python 3.7, 3.8, and 3.9[^1].
+
+![alt text](<visuals\devcontainer.png>)
 
 However, we can approximate certain aspects of the computation using TensorFlow, particularly matrix operations and differential equation solving. For a quantum simulation, we have to manually implement the dynamics (e.g., solving the Schrödinger equation) without the high-level abstractions QuTiP provides.
 
@@ -34,3 +38,11 @@ plt.ylabel('Probability')
 plt.legend()
 plt.show()
 ```
+For this code, I have incuded the stem documentation within the code file named as [tf_example.ipynb](https://github.com/ubsuny/MC-CP2P2024/blob/main/tf_example.ipynb).
+
+The result of this plot will look like:
+
+![alt text](visuals/tf_example_result.png)
+
+## References:
+[^1]: [Tensorflow Quantum](https://www.tensorflow.org/quantum/install)
