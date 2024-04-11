@@ -1,6 +1,6 @@
 {
     "name": "Monte Carlo Simulation in Python",
-    "image": "python:latest",
+    "image": "python:3.9",
     "customizations": {
         "vscode": {
             "extensions": [
