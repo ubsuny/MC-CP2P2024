@@ -50,5 +50,6 @@ The result of this plot will look like:
 
 ![alt text](visuals/tf_example_result.png)
 
+A qubit in a superposition state is shown in the plot bouncing over time between the |0> and |1> states.  The graph indicates that the probability of the qubit being in state 0 begins at 1 and gradually decreases to 0. On the other hand, the likelihood of the qubit being in state 1 begins at 0 and gradually increases to 1. This implies that a coherent oscillation between states 0 and 1 is occurring within the qubit.
 ## References:
 [^1]: [Tensorflow Quantum](https://www.tensorflow.org/quantum/install)
