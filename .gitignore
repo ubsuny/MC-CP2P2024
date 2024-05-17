@@ -1,0 +1,170 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Pytest
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Pyright type checker
+.pyright/
+
+# Environments
+.env
+.env.*
+
+# Logs
+*.log
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+coverage/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Windows
+Thumbs.db
+*.lnk
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+._.DS_Store
+.fseventsd
+.TemporaryItems
+.apdisk
+
+# Linux
+*.lock
+*~
+
+# Compiled files
+*.o
+*.out
+*.class
+*.obj
+
+# C++ build folders
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Notebooks
+.ipynb_checkpoints
+
+# QuTiP generated files
+*.qobj
+
+# Other temporary files
+temp/
+*.tmp
+
+# Ignore any configuration files
+*.conf
+
+# Ignore data files
+*.dat
+*.csv
+*.txt
+*.h5
+*.json
+
+# Ignore any binary files
+*.bin
+*.dat
+*.npz
+*.npy
+*.mat
+
+# User-specific files
+*.swp
+*~
+*#
+
+# Ignore any logs
+*.log
+
+# Ignore any key files
+*.key
+
+# Ignore any executable files
+*.exe
+*.out
+*.app
+*.bat
